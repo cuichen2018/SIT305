@@ -8,3 +8,8 @@
 	liangweny 从github上面拉去代码
 	liangweny 修改changelog并提交到github
 	
+	
+	2019.4.16
+	cuichen 从github上面同步代码
+	cuichen 实现登录模块
+	cuichen 上传代码
