@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">SIT305</string>
+
+
+    <string name="app_description"></string>
+    <string name="app_github_url">APP地址：</string>
+    <string name="author">作者：</string>
+    <string name="email">邮箱：</string>
+    <string name="blog">博客：</string>
 </resources>

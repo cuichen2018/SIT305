@@ -13,3 +13,9 @@
 	cuichen 从github上面同步代码
 	cuichen 实现登录模块
 	cuichen 上传代码
+
+	2019.4.16
+	liangweny 从github上面同步代码
+	liangweny 实现about模块
+	liangweny 测试上传代码
+	
