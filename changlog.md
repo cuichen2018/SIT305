@@ -19,3 +19,10 @@
 	liangweny 实现about模块
 	liangweny 测试上传代码
 	
+	2019.4.17
+	cuichen 从github上面同步代码
+	cuichen 创建GuideActivity
+	cuichen 了解百度地图api,熟悉demo
+	cuichen 上传代码
+	
+	
