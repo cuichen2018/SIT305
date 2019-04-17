@@ -7,4 +7,4 @@ SIT305 project for android
 关于页面有app的github地址和开发者信息
 
 
-本app导航主要使用百度地图，百度定位
+本app导航主要使用百度地图，百度定位回去当前经纬度以及地址信息
