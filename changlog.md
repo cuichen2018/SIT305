@@ -25,4 +25,7 @@
 	cuichen 了解百度地图api,熟悉demo
 	cuichen 上传代码
 	
-	
+	2019.4.17
+	liangweny 从github上面同步代码
+	liangweny 初步完成周边停车场列表activity
+	liangweny 测试上传代码
