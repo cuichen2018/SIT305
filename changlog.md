@@ -29,3 +29,10 @@
 	liangweny 从github上面同步代码
 	liangweny 初步完成周边停车场列表activity
 	liangweny 测试上传代码
+	
+	2019.4.18
+	cuichen 从github上面同步代码
+	cuichen 增加左滑关闭模块
+	cuichen 将about页面添加左滑关闭
+	cuichen 测试上传代码
+	
