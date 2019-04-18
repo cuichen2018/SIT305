@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import me.imid.swipebacklayout.lib.app.SwipeBackActivity;
+
 
 /**
  * DESC:
@@ -11,7 +13,7 @@ import android.view.MenuItem;
  * Time: 下午4:29
  * author: liang
  */
-public class AboutActivity extends Activity {
+public class AboutActivity extends SwipeBackActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
