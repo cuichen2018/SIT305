@@ -1,8 +1,13 @@
 package com.project.SIT305;
 
+import android.support.annotation.Nullable;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.project.SIT305.adapter.ParkingListAdapter;
 
@@ -10,9 +15,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class MainActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
+    private DrawerLayout drawerLayout;
+
+
     private SwipeRefreshLayout mSwipeRefreshWidget;
     private RecyclerView       mRecyclerView;
+    DrawerLayout mDrawerLayout;
     private LinearLayoutManager mLayoutManager;
+    private ParkingListAdapter  mAdapter;
+    int sort = 0;       //0代表正常  1代表价格排序  2代表距离排序
 
     List<ParkingDataBean> parkingDataBeanList = new ArrayList<>();
 
@@ -21,8 +32,24 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        final DrawerArrowDrawable indicator = new DrawerArrowDrawable(this);
+        indicator.setColor(Color.WHITE);
+        getSupportActionBar().setHomeAsUpIndicator(indicator);
 
-
+        setTransformer();
+        // setListener();
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+        drawerLayout.setScrimColor(Color.TRANSPARENT);
+        drawerLayout.addDrawerListener(new DrawerLayout.SimpleDrawerListener() {
+            @Override
+            public void onDrawerSlide(View drawerView, float slideOffset) {
+                if (((ViewGroup) drawerView).getChildAt(1).getId() == R.id.leftSideBar) {
+                    indicator.setProgress(slideOffset);
+                }
+            }
+        });
         mSwipeRefreshWidget = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_widget);
         mSwipeRefreshWidget.setColorSchemeResources(R.color.primary,
                 R.color.primary_dark, R.color.primary_light,
@@ -62,6 +89,32 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
             ActivityCompat.startActivity(MainActivity.this, intent, options.toBundle());
         }
     };
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
+
+    }
+
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()) {
+//            case R.id.option_normal_1:
+//                sort = 1;
+//                getData();
+//                return true;
+//            case R.id.option_normal_2:
+//                sort = 2;
+//                getData();
+//                return true;
+//            default_pic:
+//                return super.onOptionsItemSelected(item);
+//        }
+//
+//    }
 
     private void getData() {
         parkingDataBeanList.clear();
@@ -127,4 +180,117 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
     }
 
 
+    private void setListener() {
+        final TextView tipView = (TextView) findViewById(R.id.tipView);
+        SideBar leftSideBar = (SideBar) findViewById(R.id.leftSideBar);
+        leftSideBar.setFantasyListener(new SimpleFantasyListener() {
+            @Override
+            public boolean onHover(@Nullable View view, int index) {
+                tipView.setVisibility(View.VISIBLE);
+                if (view instanceof TextView) {
+                    tipView.setText(String.format("%s at %d", ((TextView) view).getText().toString(), index));
+                } else if (view != null && view.getId() == R.id.userInfo) {
+                    tipView.setText(String.format("个人中心 at %d", index));
+                } else {
+                    tipView.setText(null);
+                }
+                return false;
+
+            }
+
+            @Override
+            public boolean onSelect(View view, int index) {
+                tipView.setVisibility(View.INVISIBLE);
+                Toast.makeText(MainActivity.this, String.format("%d selected", index), Toast.LENGTH_SHORT).show();
+                return false;
+            }
+
+            @Override
+            public void onCancel() {
+                tipView.setVisibility(View.INVISIBLE);
+            }
+        });
+    }
+
+    private void setTransformer() {
+        final float spacing = getResources().getDimensionPixelSize(R.dimen.spacing);
+//        SideBar rightSideBar = (SideBar) findViewById(R.id.rightSideBar);
+//        rightSideBar.setTransformer(new Transformer() {
+//            private View lastHoverView;
+//
+//            @Override
+//            public void apply(ViewGroup sideBar, View itemView, float touchY, float slideOffset, boolean isLeft) {
+//                boolean hovered = itemView.isPressed();
+//                if (hovered && lastHoverView != itemView) {
+//                    animateIn(itemView);
+//                    animateOut(lastHoverView);
+//                    lastHoverView = itemView;
+//                }
+//            }
+//
+//            private void animateOut(View view) {
+//                if (view == null) {
+//                    return;
+//                }
+//                ObjectAnimator translationX = ObjectAnimator.ofFloat(view, "translationX", -spacing, 0);
+//                translationX.setDuration(200);
+//                translationX.start();
+//            }
+//
+//            private void animateIn(View view) {
+//                ObjectAnimator translationX = ObjectAnimator.ofFloat(view, "translationX", 0, -spacing);
+//                translationX.setDuration(200);
+//                translationX.start();
+//            }
+//        });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+//        if (item.getItemId() == android.R.id.home) {
+//            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+//                drawerLayout.closeDrawer(GravityCompat.START);
+//            } else {
+//                drawerLayout.openDrawer(GravityCompat.START);
+//            }
+//        }
+
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                } else {
+                    drawerLayout.openDrawer(GravityCompat.START);
+                }
+                break;
+            case R.id.option_normal_1:
+                sort = 1;
+                getData();
+                return true;
+            case R.id.option_normal_2:
+                sort = 2;
+                getData();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+        return true;
+    }
+
+    public void onClick(View view) {
+        if (view instanceof TextView) {
+            String title = ((TextView) view).getText().toString();
+            if (title.startsWith("about")) {
+//                Toast.makeText(this, title, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+                startActivity(intent);
+            } else if (title.equals("feedback")) {
+//                startActivity(UniversalActivity.newIntent(this, title));
+                Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+                startActivity(intent);
+            }
+        } else if (view.getId() == R.id.userInfo) {
+//            startActivity(UniversalActivity.newIntent(this, "个人中心"));
+        }
+    }
 }
