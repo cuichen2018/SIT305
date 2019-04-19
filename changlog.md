@@ -36,3 +36,8 @@
 	cuichen 将about页面添加左滑关闭
 	cuichen 测试上传代码
 	
+	2019.4.19
+	liangweny 从github上面同步代码
+	liangweny 增加停车场详情页面
+	liangweny 测试上传代码
+	
