@@ -60,3 +60,9 @@
 	cuichen 从github上面同步代码
 	cuichen 添加jniLibs so
 	cuichen 测试上传代码
+
+	2019.4.28
+	liangweny 从github上面同步代码
+	liangweny 添加圆形图片
+	liangweny 测试上传代码
+	
