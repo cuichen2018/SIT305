@@ -45,3 +45,8 @@
 	cuichen 从github上面同步代码
 	cuichen 完成导航
 	cuichen 测试上传代码
+	
+	2019.4.24
+	cuichen 从github上面同步代码
+	cuichen 增加图片加载框架Glide
+	cuichen 测试上传代码
