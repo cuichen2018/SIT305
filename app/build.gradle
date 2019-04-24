@@ -30,6 +30,8 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:3.6.1'
     implementation project(':swipeback')
     implementation 'com.github.mzule.fantasyslide:library:1.0.5'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+
 
     implementation project(':NaviTts')
     implementation project(':onsdk_all')
