@@ -50,3 +50,9 @@
 	cuichen 从github上面同步代码
 	cuichen 增加图片加载框架Glide
 	cuichen 测试上传代码
+
+	2019.4.25
+	liangweny 从github上面同步代码
+	liangweny 修改bug
+	liangweny 测试上传代码
+	
