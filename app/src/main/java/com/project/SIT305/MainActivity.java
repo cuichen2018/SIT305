@@ -1,6 +1,10 @@
-package com.project.SIT305;
+package com.project.sit305;
 
+import android.animation.ObjectAnimator;
+import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
@@ -8,17 +12,25 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.support.v7.graphics.drawable.DrawerArrowDrawable;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.project.SIT305.adapter.ParkingListAdapter;
-import com.project.SIT305.bean.ParkingDataBean;
-import com.project.SIT305.utils.DistanceSort;
-import com.project.SIT305.utils.PriceSort;
+import com.github.mzule.fantasyslide.SideBar;
+import com.github.mzule.fantasyslide.SimpleFantasyListener;
+import com.github.mzule.fantasyslide.Transformer;
+import com.project.sit305.adapter.ParkingListAdapter;
+import com.project.sit305.bean.ParkingDataBean;
+import com.project.sit305.utils.DistanceSort;
+import com.project.sit305.utils.PriceSort;
 
 import java.util.ArrayList;
 import java.util.Collections;
