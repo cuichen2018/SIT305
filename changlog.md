@@ -56,3 +56,7 @@
 	liangweny 修改bug
 	liangweny 测试上传代码
 	
+	2019.4.26
+	cuichen 从github上面同步代码
+	cuichen 添加jniLibs so
+	cuichen 测试上传代码
