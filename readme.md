@@ -12,3 +12,4 @@ SIT305 project for android
 注册登录信息存储到sharedpreference中，采用键值对的方式存储账号密码，多个账号密码直接采用'；'分隔。暂时未加密，后期可以采用非对称加密，更安全。
 停车场列表采用recycleView，复用item，更省内存，防止内存泄露。item 使用support v7中的cardView，立体效果更突出
 个人信息采用圆形图片，侧滑栏添加滑动放大效果，更加美观
+停车场列表根据price和distance排序
