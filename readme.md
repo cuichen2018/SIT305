@@ -14,3 +14,4 @@ SIT305 project for android
 个人信息采用圆形图片，侧滑栏添加滑动放大效果，更加美观
 停车场列表根据price和distance排序
 logout 对话框
+修改app 名字和icon
