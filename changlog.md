@@ -66,3 +66,8 @@
 	liangweny 添加圆形图片
 	liangweny 测试上传代码
 	
+	
+	2019.4.29
+	cuichen 从github上面同步代码
+	cuichen 修改权限
+	cuichen 测试上传代码
