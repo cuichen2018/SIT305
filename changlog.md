@@ -71,3 +71,8 @@
 	cuichen 从github上面同步代码
 	cuichen 修改权限
 	cuichen 测试上传代码
+
+	2019.5.5
+	liangweny 从github上面同步代码
+	liangweny 进行系统测试并修改bug
+	liangweny 测试上传代码

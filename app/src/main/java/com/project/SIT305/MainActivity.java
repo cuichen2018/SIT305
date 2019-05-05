@@ -1,4 +1,4 @@
-package com.project.sit305;
+package com.project.SIT305;
 
 import android.animation.ObjectAnimator;
 import android.app.Activity;
@@ -27,10 +27,10 @@ import android.widget.Toast;
 import com.github.mzule.fantasyslide.SideBar;
 import com.github.mzule.fantasyslide.SimpleFantasyListener;
 import com.github.mzule.fantasyslide.Transformer;
-import com.project.sit305.adapter.ParkingListAdapter;
-import com.project.sit305.bean.ParkingDataBean;
-import com.project.sit305.utils.DistanceSort;
-import com.project.sit305.utils.PriceSort;
+import com.project.SIT305.adapter.ParkingListAdapter;
+import com.project.SIT305.bean.ParkingDataBean;
+import com.project.SIT305.utils.DistanceSort;
+import com.project.SIT305.utils.PriceSort;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -39,6 +39,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
     private DrawerLayout drawerLayout;
 
+    static final String ROUTE_PLAN_NODE = "routePlanNode";
 
     private SwipeRefreshLayout mSwipeRefreshWidget;
     private RecyclerView       mRecyclerView;
@@ -142,15 +143,17 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         parkingDataBeanList.clear();
 
         ParkingDataBean parkingDataBean1 = new ParkingDataBean();
-        parkingDataBean1.setName("华科停车场");
+        parkingDataBean1.setName("HUST Parking");
         parkingDataBean1.setPrice(2);
         parkingDataBean1.setDistance(5);
         parkingDataBean1.setLongitude(114.419826);
         parkingDataBean1.setLatitude(30.518754);
+//        -37.811934，144.972508
+
         parkingDataBeanList.add(parkingDataBean1);
 
         ParkingDataBean parkingDataBean2 = new ParkingDataBean();
-        parkingDataBean2.setName("武汉大学");
+        parkingDataBean2.setName("Wuhan University Parking");
         parkingDataBean2.setPrice(3);
         parkingDataBean2.setDistance(2);
         parkingDataBean2.setLongitude(114.371605);
@@ -158,7 +161,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         parkingDataBeanList.add(parkingDataBean2);
 
         ParkingDataBean parkingDataBean3 = new ParkingDataBean();
-        parkingDataBean3.setName("光谷广场");
+        parkingDataBean3.setName("Optics Valley Square Parking");
         parkingDataBean3.setPrice(5);
         parkingDataBean3.setDistance(10);
 
@@ -167,7 +170,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         parkingDataBeanList.add(parkingDataBean3);
 
         ParkingDataBean parkingDataBean4 = new ParkingDataBean();
-        parkingDataBean4.setName("街道口");
+        parkingDataBean4.setName("Jie Dao Kou Parking");
         parkingDataBean4.setPrice(4);
         parkingDataBean4.setDistance(15);
         parkingDataBean4.setLongitude(114.357185);
@@ -175,13 +178,12 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         parkingDataBeanList.add(parkingDataBean4);
 
         ParkingDataBean parkingDataBean5 = new ParkingDataBean();
-        parkingDataBean5.setName("汉街");
+        parkingDataBean5.setName("Han Street Parking");
         parkingDataBean5.setPrice(1);
         parkingDataBean5.setDistance(4);
         parkingDataBean5.setLongitude(114.353486);
         parkingDataBean5.setLatitude(30.559531);
         parkingDataBeanList.add(parkingDataBean5);
-
         if (sort == 1) {
             Collections.sort(parkingDataBeanList, new PriceSort());
         } else if (sort == 2) {

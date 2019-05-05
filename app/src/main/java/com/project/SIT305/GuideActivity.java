@@ -12,6 +12,7 @@ import com.baidu.navisdk.adapter.BaiduNaviManagerFactory;
 import com.baidu.navisdk.adapter.IBNRouteGuideManager;
 import com.baidu.navisdk.adapter.map.BNItemizedOverlay;
 import com.baidu.navisdk.adapter.map.BNOverlayItem;
+import com.project.SIT305.utils.EventHandler;
 
 /**
  * DESC:
@@ -44,7 +45,7 @@ public class GuideActivity extends Activity {
             Bundle bundle = intent.getExtras();
             if (bundle != null) {
                 mBNRoutePlanNode = (BNRoutePlanNode)
-                        bundle.getSerializable(DemoMainActivity.ROUTE_PLAN_NODE);
+                        bundle.getSerializable(MainActivity.ROUTE_PLAN_NODE);
             }
         }
 
@@ -84,7 +85,7 @@ public class GuideActivity extends Activity {
         BNOverlayItem item =
                 new BNOverlayItem(2563047.686035, 1.2695675172607E7, BNOverlayItem.CoordinateType.BD09_MC);
         BNItemizedOverlay overlay = new BNItemizedOverlay(
-                DemoGuideActivity.this.getResources().getDrawable(R.drawable
+                GuideActivity.this.getResources().getDrawable(R.drawable
                         .navi_guide_turn));
         overlay.addItem(item);
         overlay.show();
@@ -139,7 +140,7 @@ public class GuideActivity extends Activity {
                     if (msg.what == MSG_RESET_NODE) {
                         mRouteGuideManager.resetEndNodeInNavi(
                                 new BNRoutePlanNode(116.21142, 40.85087, "百度大厦11",
-                                        null, CoordinateType.GCJ02));
+                                        null, BNRoutePlanNode.CoordinateType.GCJ02));
                     }
                 }
             };

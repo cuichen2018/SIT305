@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2018 Baidu, Inc. All Rights Reserved.
  */
-package com.project.sit305.utils;
+package com.project.SIT305.utils;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -17,7 +17,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.project.sit305.R;
+import com.project.SIT305.R;
 
 
 public class EventDialog extends Dialog {

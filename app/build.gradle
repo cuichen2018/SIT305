@@ -9,6 +9,10 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
     }
     buildTypes {
         release {
@@ -31,8 +35,7 @@ dependencies {
     implementation project(':swipeback')
     implementation 'com.github.mzule.fantasyslide:library:1.0.5'
     implementation 'de.hdodenhof:circleimageview:2.1.0'
-
-
     implementation project(':NaviTts')
     implementation project(':onsdk_all')
+//    implementation 'com.android.support:recyclerview-v7:27.1.1'
 }

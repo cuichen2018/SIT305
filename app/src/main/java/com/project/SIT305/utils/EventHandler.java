@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2018 Baidu, Inc. All Rights Reserved.
  */
-package com.project.sit305.utils;
+package com.project.SIT305.utils;
 
 import android.content.Context;
 import android.graphics.Bitmap;

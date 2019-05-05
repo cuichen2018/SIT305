@@ -4,9 +4,7 @@
     <string name="transition_news_img">transition_news_img</string>
 
 
-    <string name="app_description"></string>
-    <string name="app_github_url">APP地址：</string>
-    <string name="author">作者：</string>
-    <string name="email">邮箱：</string>
-    <string name="blog">博客：</string>
+    <string name="app_description">   The app is designed for parking lot searching and navigating.</string>
+    <string name="app_github_url">github ：https://github.com/cuichen2018/SIT305</string>
+    <string name="author">Author：cuichen  liangwenyi</string>
 </resources>
