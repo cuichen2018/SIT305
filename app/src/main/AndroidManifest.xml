@@ -38,15 +38,37 @@
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="fOyseT9UgSLgXPYGdonsBTB8npaXYnaV" />
+            android:value="LGZwSESPfk6xA7IyCjvlQD8LnmEfvPVp" />
 
-        <activity android:name=".MainActivity">
+        <!--<activity android:name=".MainActivity">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".MainActivity" />
+        <activity android:name=".AboutActivity" />
+
+
+        <activity
+            android:name=".GuideActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar"></activity>
+        <activity
+            android:name=".ParkingDetailsActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:theme="@style/AppTheme.NoActionBar.Translucent"></activity>
+
     </application>
 
 </manifest>

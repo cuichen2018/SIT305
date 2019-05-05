@@ -20,8 +20,8 @@ import com.baidu.navisdk.adapter.BaiduNaviManagerFactory;
 import com.baidu.navisdk.adapter.IBNRoutePlanManager;
 import com.baidu.navisdk.adapter.IBNTTSManager;
 import com.baidu.navisdk.adapter.IBaiduNaviManager;
-import com.project.sit305.bean.ParkingDataBean;
-import com.project.sit305.utils.ImageLoaderUtils;
+import com.project.SIT305.bean.ParkingDataBean;
+import com.project.SIT305.utils.ImageLoaderUtils;
 import com.project.sit305.utils.NormalUtils;
 
 import java.io.File;
@@ -320,7 +320,7 @@ public class ParkingDetailsActivity extends SwipeBackActivity {
 //                                Toast.makeText(ParkingDetailsActivity.this, "算路成功准备进入导航", Toast.LENGTH_SHORT)
 //                                        .show();
                                 Intent intent = new Intent(ParkingDetailsActivity.this,
-                                        DemoGuideActivity.class);
+                                        GuideActivity.class);
                                 Bundle bundle = new Bundle();
                                 bundle.putSerializable(ROUTE_PLAN_NODE, mStartNode);
                                 intent.putExtras(bundle);
