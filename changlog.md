@@ -1,78 +1,78 @@
-	cuichen 创建仓库，并且邀请liangweny加入合作开发
-	cuichen 创建readme.md 和changelog.md
-	cuichen 创建一个空工程并且提交到github
+	cuichen Create repository，invite liangweny as an contributor to the project
+	cuichen create readme.md and changelog.md
+	cuichen create a empty project and commit to github
 
 
 	2019.4.15
-	liangweny 同意cuichen的合作开发邀请
-	liangweny 从github上面拉去代码
-	liangweny 修改changelog并提交到github
+	liangweny accept the invitation and become a contributor to this project
+	liangweny pull project from github
+	liangweny write changelog and commit to github
 	
 	
 	2019.4.16
-	cuichen 从github上面同步代码
-	cuichen 实现登录模块
-	cuichen 上传代码
+	cuichen pull code from github
+	cuichen implement the login module
+	cuichen upload login module code 
 
 	2019.4.16
-	liangweny 从github上面同步代码
-	liangweny 实现about模块
-	liangweny 测试上传代码
+	liangweny pull code from github
+	liangweny implement about module
+	liangweny testing the about module and upload code
 	
 	2019.4.17
-	cuichen 从github上面同步代码
-	cuichen 创建GuideActivity
-	cuichen 了解百度地图api,熟悉demo
-	cuichen 上传代码
+	cuichen pull code from github
+	cuichen Create GuideActivity
+	cuichen Tried google API but failed, started to learn baidu map API and implement the navigation module
+	cuichen upload navigation module code
 	
 	2019.4.17
-	liangweny 从github上面同步代码
-	liangweny 初步完成周边停车场列表activity
-	liangweny 测试上传代码
+	liangweny pull code from github
+	liangweny finish the demo for the parking list activity
+	liangweny testing the pariking list and upload code. 
 	
 	2019.4.18
-	cuichen 从github上面同步代码
-	cuichen 增加左滑关闭模块
-	cuichen 将about页面添加左滑关闭
-	cuichen 测试上传代码
+	cuichen pull code from github
+	cuichen add slide left to close the page function 
+	cuichen add slide left to close the page function to the about page
+	cuichen testing the module and upload code. 
 	
 	2019.4.19
-	liangweny 从github上面同步代码
-	liangweny 增加停车场详情页面
-	liangweny 测试上传代码
+	liangweny pull code from github
+	liangweny add the information detail page for parking lots module  
+	liangweny testing and upload code. 
 	
 	2019.4.22
-	cuichen 从github上面同步代码
-	cuichen 完成导航
-	cuichen 测试上传代码
+	cuichen pull code from github
+	cuichen finish the navigation module
+	cuichen testing and upload code. 
 	
 	2019.4.24
-	cuichen 从github上面同步代码
-	cuichen 增加图片加载框架Glide
-	cuichen 测试上传代码
+	cuichen pull code from github
+	cuichen add the image loading framework Glide
+	cuichen testing and upload the code. 
 
 	2019.4.25
-	liangweny 从github上面同步代码
-	liangweny 修改bug
-	liangweny 测试上传代码
+	liangweny pull code from github
+	liangweny testing and fix bugs
+	liangweny testing and upload the code. 
 	
 	2019.4.26
-	cuichen 从github上面同步代码
-	cuichen 添加jniLibs so
-	cuichen 测试上传代码
+	cuichen  pull code from github
+	cuichen add jniLibs so
+	cuichen testing and uploading code. 
 
 	2019.4.28
-	liangweny 从github上面同步代码
-	liangweny 添加圆形图片
-	liangweny 测试上传代码
+	liangweny  pull code from github
+	liangweny  add the round profile image. 
+	liangweny testing and uploading code.
 	
 	
 	2019.4.29
-	cuichen 从github上面同步代码
-	cuichen 修改权限
-	cuichen 测试上传代码
+	cuichen pull code from github
+	cuichen refine the privilege. 
+	cuichen testing and uploading the code. 
 
 	2019.5.5
-	liangweny 从github上面同步代码
-	liangweny 进行系统测试并修改bug
-	liangweny 测试上传代码
+	liangweny pull code from github 
+	liangweny testing the whole system and fix all the bugs
+	liangweny testing and uploading the code. 
