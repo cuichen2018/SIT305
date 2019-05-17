@@ -1,17 +1,23 @@
-SIT305 project for android
-本app主要提供停车场搜索和导航功能，提供停车场列表以及停车场详情数据。
-停车场列表支持距离和价格排序，停车场详情，包括图片，剩余车位，价格等等。
-停车场详情页面可以进入导航页面，从当前定位通过百度地图搜索找到最近的一条线路，提供导航功能。目前只支持驾驶导航，未来可扩展步行以及自行车导航线路。
-除了基本功能之外，还添加注册功能，输入username，并判断当前username是否被注册过。输入密码并确认两次输入的密码是否正确。
-注册成功的账号才能在登录界面登录，登录成功的用户下一次进入不需要再次登录，除非在侧滑页面点击logout。
-关于页面有app的github地址和开发者信息
+#SIT305 Android Project (Parking APP)
+
+The app provide the parking lot searching and navigating functions. Allow users to see a parking lot list and details of diferent parkings.
+
+The pariking list provide sorting by distance and price. The details includes the map overview, remaining areas and price list. 
+
+The details of parkings page provide a button for navigation to the particular parking lot. The Baidu map will provide a best route for driving.  
+
+The login page provide register and notification for duplicate username. The register page needs users to input password twice to confirm the password 
+
+Users can login after registration. The client will keep the user logged in unless the user press logout to exit the current account. 
+
+The about page includes the information of the Developers and a Link to Github repository. 
 
 
-本app导航主要使用百度地图，百度定位回去当前经纬度以及地址信息，然后根据经纬度信息来回去天气信息。
-获取到停车场列表中包含停车场的经纬度信息，导航页面调用百度api实现导航功能，导航有百度自带的语音提示。
-注册登录信息存储到sharedpreference中，采用键值对的方式存储账号密码，多个账号密码直接采用'；'分隔。暂时未加密，后期可以采用非对称加密，更安全。
-停车场列表采用recycleView，复用item，更省内存，防止内存泄露。item 使用support v7中的cardView，立体效果更突出
-个人信息采用圆形图片，侧滑栏添加滑动放大效果，更加美观
-停车场列表根据price和distance排序
-logout 对话框
-修改app 名字和icon
+
+The navigation of the this app is based on the baidu map. The baidu map will get the current location from the device and return the navigation as well as the current weather information. After getting the longitude and lagitude information of the Parking lot. The navigation page will call the Baidu API to implement navigation.  
+
+The registration information of users will be stored into the sharedpreference. The username and password are stored as a key-value pair. Different account are separated using ";". No encryption is provided currently which can be implemented in the future. 
+
+The parking list is using the recycleview and reuse the item which will save more ram. And the item is using the cardview in support v7 which will provide a more conspicuous 3D effect. 
+
+The sliding menu has a dynamic effect which will provide a more user-friendly and beautiful interface.
