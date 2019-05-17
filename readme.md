@@ -1,5 +1,7 @@
 #SIT305 Android Project (Parking APP)
 
+CHENMING CUI & WENYI LIANG
+
 The app provide the parking lot searching and navigating functions. Allow users to see a parking lot list and details of diferent parkings.
 
 The pariking list provide sorting by distance and price. The details includes the map overview, remaining areas and price list. 
