@@ -1,6 +1,7 @@
 #SIT305 Android Project (Parking APP)
 
 CHENMING CUI & WENYI LIANG
+Github: https://github.com/cuichen2018/SIT305.git
 
 The app provide the parking lot searching and navigating functions. Allow users to see a parking lot list and details of diferent parkings.
 
