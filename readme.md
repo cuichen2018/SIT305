@@ -2,6 +2,8 @@
 
 CHENMING CUI & WENYI LIANG
 
+217363136 & 217451557
+
 Video Demo: https://youtu.be/qPEjJHlh9C8
 
 Github: https://github.com/cuichen2018/SIT305.git
